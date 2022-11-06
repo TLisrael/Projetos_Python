@@ -26,8 +26,11 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(main_janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
+# criando display
 
-
+app_label = Label(frame_tela, text='12345478', width=16, height=2, padx=7, relief=FLAT, anchor='e', justify=RIGHT,
+                  font=('Ivy 18'), bg=blue_color, fg=white_color)
+app_label.place(x=0, y=0)
 
 # Criando botoes
 b_1 = Button(frame_corpo, text='C', width=11, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
@@ -56,7 +59,6 @@ b_7 = Button(frame_corpo, text='*', width=5, height=2, bg=orange_color, fg=white
              relief=RAISED, overrelief=RIDGE)
 b_7.place(x=177, y=52)
 
-
 b_8 = Button(frame_corpo, text='4', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
              overrelief=RIDGE)
 b_8.place(x=0, y=104)
@@ -64,41 +66,37 @@ b_9 = Button(frame_corpo, text='5', width=5, height=2, bg=gray_color, font=('Ivy
              overrelief=RIDGE)
 b_9.place(x=59, y=104)
 b_10 = Button(frame_corpo, text='6', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+              overrelief=RIDGE)
 b_10.place(x=118, y=104)
 
-b_11= Button(frame_corpo, text='-', width=5, height=2, bg=orange_color, fg=white_color, font=('Ivy 13 bold'),
-             relief=RAISED, overrelief=RIDGE)
+b_11 = Button(frame_corpo, text='-', width=5, height=2, bg=orange_color, fg=white_color, font=('Ivy 13 bold'),
+              relief=RAISED, overrelief=RIDGE)
 b_11.place(x=177, y=104)
 
-
-b_12= Button(frame_corpo, text='1', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+b_12 = Button(frame_corpo, text='1', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
+              overrelief=RIDGE)
 b_12.place(x=0, y=155)
 b_13 = Button(frame_corpo, text='2', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+              overrelief=RIDGE)
 b_13.place(x=59, y=155)
 b_14 = Button(frame_corpo, text='3', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+              overrelief=RIDGE)
 b_14.place(x=118, y=155)
 
 b_15 = Button(frame_corpo, text='+', width=5, height=2, bg=orange_color, fg=white_color, font=('Ivy 13 bold'),
-             relief=RAISED, overrelief=RIDGE)
+              relief=RAISED, overrelief=RIDGE)
 b_15.place(x=177, y=155)
 
-
 b_16 = Button(frame_corpo, text='0', width=11, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+              overrelief=RIDGE)
 b_16.place(x=0, y=208)
 
 b_17 = Button(frame_corpo, text='.', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+              overrelief=RIDGE)
 b_17.place(x=118, y=208)
 
 b_18 = Button(frame_corpo, text='=', width=5, height=2, bg=orange_color, fg=white_color, font=('Ivy 13 bold'),
-             relief=RAISED, overrelief=RIDGE)
+              relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
-
-
 
 main_janela.mainloop()
