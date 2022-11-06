@@ -26,9 +26,24 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(main_janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
-# criando display
+# variavel todos valores
+todos_valores = ''
 
-app_label = Label(frame_tela, text='12345478', width=16, height=2, padx=7, relief=FLAT, anchor='e', justify=RIGHT,
+# Criando função
+def entrada_valores(event):
+    global todos_valores
+    todos_valores = todos_valores + str(event)
+    resultado = eval('9/9')
+
+    # Passando valor para a tela
+    valor_texto.set(todos_valores)
+
+
+# criando display
+valor_texto = StringVar()
+
+app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor='e',
+                  justify=RIGHT,
                   font=('Ivy 18'), bg=blue_color, fg=white_color)
 app_label.place(x=0, y=0)
 
@@ -38,7 +53,7 @@ b_1 = Button(frame_corpo, text='C', width=11, height=2, bg=gray_color, font=('Iv
 b_1.place(x=0, y=0)
 
 b_2 = Button(frame_corpo, text='%', width=5, height=2, bg=gray_color, font=('Ivy 13 bold'), relief=RAISED,
-             overrelief=RIDGE)
+             overrelief=RIDGE, command=lambda: entrada_valores('%'), )
 b_2.place(x=118, y=0)
 
 b_3 = Button(frame_corpo, text='/', width=5, height=2, bg=orange_color, fg=white_color, font=('Ivy 13 bold'),
