@@ -33,8 +33,6 @@ todos_valores = ''
 def entrada_valores(event):
     global todos_valores
     todos_valores = todos_valores + str(event)
-    resultado = eval('9/9')
-
     # Passando valor para a tela
     valor_texto.set(todos_valores)
 
