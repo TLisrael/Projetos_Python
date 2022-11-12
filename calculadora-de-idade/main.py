@@ -47,7 +47,7 @@ def idade():
     data_inicial = date(ano_1, mes_1, dia_1)
 
     # Separando os valores
-    mes_2, dia_2, ano_2 = [int(f) for f in inicial.split('/')]
+    mes_2, dia_2, ano_2 = [int(f) for f in termino.split('/')]
     # Conversão de valores em fortmato de data
     data_nascimento = date(ano_2, mes_2, dia_2)
 
@@ -55,6 +55,9 @@ def idade():
     meses = relativedelta(data_inicial, data_nascimento).months
     dias = relativedelta(data_inicial, data_nascimento).days
 
+    l_app_anos['text'] = anos
+    l_app_meses['text'] = meses
+    l_app_dias['text'] = dias
 
 
 
